@@ -3,6 +3,9 @@
 /node_modules
 /.pnp
 .pnp.js
+/backend/env
+/backend/db_config.py
+/backend/__pycache__
 
 #Testing
 /coverage
