@@ -9,6 +9,9 @@ function Navbar() {
         <li>
           <Link to="/">Home</Link>
         </li>
+        <li>
+          <Link to="/units">Units</Link>
+        </li>
       </ul>
     </nav>
   );
