@@ -30,16 +30,15 @@ def getUnit(event):
         unit = cur.fetchone()
 
         #Convert response to JSON 
-        unit_data = {
-            "id": unit[0],
-            "name":unit[1],
-            "profile":unit[2],
-            "color":unit[3],
-            "member_1":unit[4],
-            "member_2":unit[5],
-            "member_3":unit[6],
-            "member_4":unit[7],
-            "member_5":unit[8],
-            "member_6":unit[9],
-        }
+        unit_data = {"id": unit[0],
+                     "name":unit[1],
+                     "profile":unit[2],
+                     "color":unit[3],
+                     "member_1":unit[4],
+                     "member_2":unit[5],
+                     "member_3":unit[6],
+                     "member_4":unit[7],
+                     "member_5":unit[8],
+                     "member_6":unit[9]
+                    }
     return unit_data
