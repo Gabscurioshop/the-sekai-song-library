@@ -6,6 +6,7 @@
 /backend/env
 /backend/db_config.py
 /backend/__pycache__
+/backend/.flaskenv
 
 #Testing
 /coverage
