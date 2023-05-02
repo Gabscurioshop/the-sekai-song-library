@@ -34,3 +34,9 @@ def wonder_show():
 @app.route('/N25')
 def night_cord():
     return getUnit({"unit_ID":"N25"})
+
+#No Unit ID selected
+@app.route('/NoUnit')
+def no_unit():
+    return getUnit({"unit_ID":""})
+

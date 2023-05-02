@@ -11,12 +11,16 @@ function UnitView() {
     var baseURL = "";
 
     //Get baseURL based on Unit ID
-    if (location.state.id === "VS") baseURL="/VS";
-    else if (location.state.id === "LN") baseURL="/LN";
-    else if (location.state.id === "MMJ") baseURL="/MMJ";
-    else if (location.state.id === "VBS") baseURL="/VBS";
-    else if (location.state.id === "WXS") baseURL="/WXS";
-    else if (location.state.id === "N25") baseURL = "/N25";
+    if(location.state === null) baseURL = "/NoUnit";
+    
+    else{
+      if (location.state.id === "VS") baseURL="/VS";
+      else if (location.state.id === "LN") baseURL="/LN";
+      else if (location.state.id === "MMJ") baseURL="/MMJ";
+      else if (location.state.id === "VBS") baseURL="/VBS";
+      else if (location.state.id === "WXS") baseURL="/WXS";
+      else if (location.state.id === "N25") baseURL = "/N25";
+    }
 
     //Invoke Flask URL and retrieve unit data from database 
     React.useEffect(() => {
