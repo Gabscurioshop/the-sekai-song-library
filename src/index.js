@@ -4,6 +4,8 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Units from "./pages/Units";
 import UnitView from "./pages/UnitView";
+import Singers from "./pages/Singers";
+import SingerView from "./pages/SingerView";
 import NoPage from "./pages/NoPage";
 
 //Routes
@@ -15,6 +17,8 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="/units" element={<Units />} />
           <Route path="/unitview" element={<UnitView />} />
+          <Route path="/singers" element={<Singers />} />
+          <Route path="/singerview" element={<SingerView />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

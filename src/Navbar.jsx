@@ -12,6 +12,9 @@ function Navbar() {
         <li>
           <Link to="/units">Units</Link>
         </li>
+        <li>
+          <Link to="/singers">Singers</Link>
+        </li>
       </ul>
     </nav>
   );
