@@ -6,6 +6,7 @@ import Units from "./pages/Units";
 import UnitView from "./pages/UnitView";
 import Singers from "./pages/Singers";
 import SingerView from "./pages/SingerView";
+import AddSong from "./pages/AddSong";
 import NoPage from "./pages/NoPage";
 
 //Routes
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/unitview" element={<UnitView />} />
           <Route path="/singers" element={<Singers />} />
           <Route path="/singerview" element={<SingerView />} />
+          <Route path="/addsong" element={<AddSong />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
