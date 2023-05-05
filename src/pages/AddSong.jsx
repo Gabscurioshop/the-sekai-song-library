@@ -18,14 +18,15 @@ function AddSong() {
     //trigger submitting values
     const [submitting, setSubmitting] = useState(false);
     //state for sending form data to backend
-    const [post, setPost] = useState([]);
+    const [post,setPost] = useState([]);
 
     //Pass JSON POST Request body through Axios
     const createSong = (formData) => {
         axios
-            .post("postSong", formData)
+            .post("/postSong", formData)
             .then((response) => {
-                alert(response.data.body);
+                console.log(response)
+                alert(response.data);
             });
     };
     if(!post) return "No song posted!"
@@ -39,7 +40,7 @@ function AddSong() {
         setSubmitting(false);
         }, 3000); 
         console.log(formData);
-        //createSong(formData);
+        createSong(formData);
     };
 
     //Track changes in form input
@@ -133,13 +134,13 @@ function AddSong() {
                     <option value="WXS">Wonderlands x Showtime</option><option value="WXS-01">Tsukasa</option><option value="WXS-02">Emu</option><option value="WXS-03">Nene</option><option value="WXS-04">Rui</option>
                     <option value="N25">Nightcord at 25:00</option><option value="N25-01">Kanade</option><option value="N25-02">Mafuyu</option><option value="N25-03">Ena</option><option value="N25-04">Mizuki</option>
             </select>
-        
             <br/>
             <span>You can select up to six singers</span>
+
             <br/>
             <br/>
             <label>Length of Song: </label>
-            <input type="number" id="min" name="min" min="0" max="9" onChange={handleChange}/> minutes,     <input type="number" id="sec" name="sec" min="0" max="59" onChange={handleChange} /> seconds
+            <input type="number" id="min" name="min" min="0" max="9" required onChange={handleChange}/> minutes,     <input type="number" id="sec" name="sec" min="0" max="59" required onChange={handleChange} /> seconds
             <br/>
             <span> Format: 9 minutes, 59 seconds max</span>   
 
@@ -158,7 +159,7 @@ function AddSong() {
             <br/>
             <br/>
             <label>Lyricist(s): </label>
-            <input type="text" id="lyricist1" name="lyricist1" maxLength="50" onChange={handleChange}/>
+            <input type="text" id="lyricist1" name="lyricist1" maxLength="50" required onChange={handleChange}/>
             <input type="text" id="lyricist2" name="lyricist2" maxLength="50" onChange={handleChange}/>
             <span> Format: 50 characters max</span>
 

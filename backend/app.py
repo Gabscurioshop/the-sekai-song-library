@@ -1,6 +1,7 @@
-from flask import Flask
+from flask import Flask, request
 from getUnit import getUnit
 from getSinger import getSinger
+from postSong import postSong
 
 app = Flask(__name__)
 
@@ -143,3 +144,10 @@ def mizuki(): return getSinger({"singer_ID":"N25-04"})
 #No Singer
 @app.route('/NoSinger')
 def no_singer(): return getSinger({"singer_ID":""})
+
+#Add Song to Database
+@app.route('/postSong', methods=['POST'])
+def add_song(): 
+    data = request.get_json()
+    done = postSong(data)
+    return done
