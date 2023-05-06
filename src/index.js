@@ -8,6 +8,7 @@ import Singers from "./pages/Singers";
 import SingerView from "./pages/SingerView";
 import Songs from "./pages/Songs";
 import AddSong from "./pages/AddSong";
+import ViewSong from "./pages/ViewSong";
 import NoPage from "./pages/NoPage";
 
 //Routes
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/singerview" element={<SingerView />} />
           <Route path="/songs" element={<Songs />} />
           <Route path="/addsong" element={<AddSong />} />
+          <Route path="/viewsong" element={<ViewSong />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

@@ -11,6 +11,9 @@ function Songs() {
             <Link to="/addsong">
                 <button>Add a Song</button>
             </Link>
+            <Link to="/viewsong">
+                <button>View a Song</button>
+            </Link>
         </div>
     );
 }

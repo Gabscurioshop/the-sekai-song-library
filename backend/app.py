@@ -2,6 +2,7 @@ from flask import Flask, request
 from getUnit import getUnit
 from getSinger import getSinger
 from postSong import postSong
+from getSong import getSong
 
 app = Flask(__name__)
 
@@ -149,5 +150,10 @@ def no_singer(): return getSinger({"singer_ID":""})
 @app.route('/postSong', methods=['POST'])
 def add_song(): 
     data = request.get_json()
-    done = postSong(data)
-    return done
+    return postSong(data)
+
+#View song
+@app.route('/getSong', methods=['POST'])
+def view_song(): 
+    data = request.get_json()
+    return getSong(data)
