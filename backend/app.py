@@ -3,6 +3,7 @@ from getUnit import getUnit
 from getSinger import getSinger
 from postSong import postSong
 from getSong import getSong
+from putSong import putSong
 
 app = Flask(__name__)
 
@@ -157,3 +158,9 @@ def add_song():
 def view_song(): 
     data = request.get_json()
     return getSong(data)
+
+#Update song
+@app.route('/putSong', methods=['POST'])
+def update_song(): 
+    data = request.get_json()
+    return putSong(data)

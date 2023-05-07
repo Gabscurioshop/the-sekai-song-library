@@ -14,6 +14,9 @@ function Songs() {
             <Link to="/viewsong">
                 <button>View a Song</button>
             </Link>
+            <Link to="/updatesong">
+                <button>Update a Song</button>
+            </Link>
         </div>
     );
 }
