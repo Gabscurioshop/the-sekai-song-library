@@ -54,7 +54,7 @@ def getSong(event):
                     "lyricist1": song[6],
                     "lyricist2": song[7],
                     "arranger1": song[8],
-                    "arranger1": song[9],
+                    "arranger2": song[9],
                     "bpm": song[10],
                     "song_category": song[11],
                     "singer1": song[12],

@@ -30,6 +30,7 @@ function ViewSong() {
     //render fields in React
     const renderFields = (songData) => {
         const data = songData;
+        console.log(data);
         //If a song wasn't found, alert the user
         //Set remianing fields to NULL
         if((data === "Invalid song name.") || (data === "Song doesn't exist.") ){
