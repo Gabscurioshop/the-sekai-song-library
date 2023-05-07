@@ -10,6 +10,7 @@ import Songs from "./pages/Songs";
 import AddSong from "./pages/AddSong";
 import ViewSong from "./pages/ViewSong";
 import UpdateSong from "./pages/UpdateSong";
+import DeleteSong from "./pages/DeleteSong";
 import NoPage from "./pages/NoPage";
 
 //Routes
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/addsong" element={<AddSong />} />
           <Route path="/viewsong" element={<ViewSong />} />
           <Route path="/updatesong" element={<UpdateSong />} />
+          <Route path="/deletesong" element={<DeleteSong />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

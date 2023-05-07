@@ -4,6 +4,7 @@ from getSinger import getSinger
 from postSong import postSong
 from getSong import getSong
 from putSong import putSong
+from deleteSong import deleteSong
 
 app = Flask(__name__)
 
@@ -164,3 +165,9 @@ def view_song():
 def update_song(): 
     data = request.get_json()
     return putSong(data)
+
+#Delete song
+@app.route('/removeSong', methods=['POST'])
+def delete_song(): 
+    data = request.get_json()
+    return deleteSong(data)

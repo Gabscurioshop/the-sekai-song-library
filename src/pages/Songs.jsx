@@ -17,6 +17,9 @@ function Songs() {
             <Link to="/updatesong">
                 <button>Update a Song</button>
             </Link>
+            <Link to="/deletesong">
+                <button>Delete a Song</button>
+            </Link>
         </div>
     );
 }
