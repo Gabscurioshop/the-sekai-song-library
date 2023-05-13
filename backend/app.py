@@ -6,6 +6,7 @@ from postSong import postSong
 from getSong import getSong
 from putSong import putSong
 from deleteSong import deleteSong
+from createCharts import aggregateData
 
 app = Flask(__name__)
 
@@ -177,3 +178,8 @@ def update_song():
 def delete_song(): 
     data = request.get_json()
     return deleteSong(data)
+
+#Create Total Songs By Unit Chart
+@app.route('/songsByUnit')
+def unit_songs():
+    return aggregateData({"option": "countUnitSongs"})

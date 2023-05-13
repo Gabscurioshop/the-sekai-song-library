@@ -16,7 +16,7 @@ function Songs() {
     if (!post) return null;
     //Convert message body into array of JSON objects
     const data = JSON.parse(post.body);
-    console.log(data);
+
     //table keys or JSON keys
     const headers = Object.keys(data[0]);
     return (

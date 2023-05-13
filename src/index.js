@@ -11,6 +11,8 @@ import AddSong from "./pages/AddSong";
 import ViewSong from "./pages/ViewSong";
 import UpdateSong from "./pages/UpdateSong";
 import DeleteSong from "./pages/DeleteSong";
+import Charts from "./pages/Charts";
+import CountUnitSongs from "./pages/CountUnitSongs";
 import NoPage from "./pages/NoPage";
 
 //Routes
@@ -29,6 +31,8 @@ export default function App() {
           <Route path="/viewsong" element={<ViewSong />} />
           <Route path="/updatesong" element={<UpdateSong />} />
           <Route path="/deletesong" element={<DeleteSong />} />
+          <Route path="/charts" element={<Charts />} />
+          <Route path="/countunitsongs" element={<CountUnitSongs />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

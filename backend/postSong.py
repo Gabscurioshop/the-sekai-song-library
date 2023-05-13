@@ -11,7 +11,10 @@ def checkForQuery(userInput):
     
 def getSingerName(cur, singerID):
     #if singer id is left blank, return empty string
-    if(singerID == ""): return ""
+    if(singerID == "" or singerID == "Singer1" or singerID == "Singer2" 
+       or singerID == "Singer3"or singerID == "Singer4" 
+       or singerID == "Singer5" or singerID == "Singer6"): 
+        return ""
 
     #Check if an entire group is selected for a singer
     elif(singerID == "VS"): return "VIRTUAL SINGER"
